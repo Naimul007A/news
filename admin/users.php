@@ -48,11 +48,12 @@
                      <?php
                       $sql = "SELECT * FROM `admin-user`";
                       $run = mysqli_query($con, $sql);
+                     $count = 1;
                       while($row=mysqli_fetch_array( $run )){
 
                       ?><tbody>
                         <tr>
-                              <td class='id'><?php echo $row['id'] ?></td>
+                           <td class='id'><?php echo $count;$count++;?></td>
                               <td><?php echo $row['name'] ?></td>
                               <td><?php echo $row['usr-name'] ?></td>
                                <td>

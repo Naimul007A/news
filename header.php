@@ -34,11 +34,31 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <?php
+               
+                require_once("config.php");
+                $sql = "SELECT * FROM category WHERE noPost > 0";
+                $run = mysqli_query($con,$sql)or die("Header Query failed");
+                ?>
                 <ul class='menu'>
-                    <li><a href='category.php'>Business</a></li>
-                    <li><a href='category.php'>Entertainment</a></li>
-                    <li><a href='category.php'>Sports</a></li>
-                    <li><a href='category.php'>Politics</a></li>
+                <li><a href='index.php'>Home</a></li>
+                
+                    <?php
+                    
+                    if ($run == true) {
+                        while ($row = mysqli_fetch_array($run)) {
+                            
+                    ?>
+                  
+                   <li><a class='' href='category.php?cateid=<?php echo $row['cate_id'] ?>'><?php echo $row['cate_name'] ?></a></li>
+                  <?php
+
+                        }
+                    }
+                    
+                    ?>
+                   
+                   
                 </ul>
             </div>
         </div>

@@ -52,7 +52,7 @@ if(isset($_SESSION["id"])){
                                     $selected = "";   
                                 }
                                ?>
-                             <option <?php echo$selected?> value="<?php echo $result1['cate_id'] ?>"><?php echo $result1['cate_name'] ?></option>
+                             <option <?php echo$selected ?> value="<?php echo $result1['cate_id'] ?>"><?php echo $result1['cate_name'] ?></option>
                                <?php 
                             }
                         }

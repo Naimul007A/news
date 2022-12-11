@@ -27,13 +27,14 @@ if(isset($_SESSION["id"])){
                      require_once("config.php");
                      $sql = "SELECT * FROM `category`";
                      $run = mysqli_query($con, $sql);
+                     $count=1;
                      while($row=mysqli_fetch_array($run)){
                         ?>
                      
                     <tbody>
 
                         <tr>
-                            <td class='id'><?php echo $row['cate_id']?></td>
+                            <td class='id'><?php echo $count;$count++;?></td>
                             <td><?php echo $row['cate_name']?></td>
                             <td><?php echo $row['noPost']?></td>
                             <td class='edit'><a href='update-category.php?id=<?php echo $row['cate_id']?>'><i class='fa fa-edit'></i></a></td>

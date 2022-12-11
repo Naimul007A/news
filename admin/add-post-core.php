@@ -11,12 +11,12 @@ $title=$_POST['post_title'];
 $decs= $_POST['postdesc'];
 $cate=$_POST['category'];
 $athr=$_POST['athr'];
-$date=date("D d M,Y");
+$date=date("d M,Y");
 
- $sql ="INSERT INTO `post`(`post_title`, `post_decs`, `post_cate`, `post_ath`, `post_img`,`post_date`) VALUES ('$title','$decs','$cate','$athr','$img','$date');";
+  $sql ="INSERT INTO `post`(`post_title`, `post_decs`, `post_cate`, `post_ath`, `post_img`,`post_date`) VALUES ('$title','$decs','$cate','$athr','$img','$date');";
   $sql .= "UPDATE `category` SET noPost=noPost+1 WHERE cate_id=$cate";
 
- $run = mysqli_multi_query($con,$sql);
+ echo $run =mysqli_multi_query($con,$sql)or die("error");
  if($run==true){
     header("Location:post.php");
  }

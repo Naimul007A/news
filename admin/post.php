@@ -19,7 +19,7 @@ if(isset($_SESSION["id"])){
                       <thead>
                           
                           <th>S.No.</th>
-                          <th>Title</th>
+                           <th>Title</th>
                           <th>Category</th>
                           <th>Date</th>
                           <th>Author</th>
@@ -43,13 +43,14 @@ if(isset($_SESSION["id"])){
                        LEFT JOIN category ON post.post_cate = category.cate_id ORDER BY post.post_id DESC LIMIT {$offset},{$limit}";
                       $run = mysqli_query($con, $sql);
                       if($run==true){
+                        $count = 1;
                         while($row=mysqli_fetch_array($run)){
                             ?>
                            
                       <tbody>
                           <tr>
-                            <td class='id'><?php echo $row['post_id'] ?></td>
-                              <td><?php echo $row['post_title'] ?></td>
+                            <td><?php echo $count;$count++; ?></td>
+                             <td><?php echo $row['post_title'] ?></td>
                               <td><?php echo $row['cate_name'] ?></td>
                               <td><?php echo $row['post_date'] ?></td>
                               <td><?php 
