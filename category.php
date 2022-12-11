@@ -27,7 +27,7 @@ require_once("config.php");
                 
                 $cateid = $_REQUEST['cateid'];
                         
-                        $limit = 10;
+                        $limit =5;
                         if(isset($_REQUEST['page'])){
                             $page = $_REQUEST['page'];
 
