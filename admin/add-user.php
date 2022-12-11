@@ -15,7 +15,7 @@ if ($_SESSION['role'] == 0) {
               </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
-                  <form  action="add-user_core.php" method ="POST" autocomplete="off">
+                  <form class="form"  action="add-user_core.php" method ="POST" autocomplete="off">
                       <div class="form-group">
                           <label>Full Name</label>
                           <input type="text" name="name" class="form-control" placeholder="First Name" required>

@@ -29,7 +29,7 @@ session_start();
 
 
                   <!-- Form Start -->
-                  <form  action="update_core.php" method ="POST">
+                  <form class="form" action="update_core.php" method ="POST">
                       <div class="form-group">
                           <input type="hidden" name="id"  class="form-control" value="<?php echo $row['id'] ?>" placeholder="" >
                       </div>

@@ -35,7 +35,7 @@ require_once("config.php");
                        WHERE post_title LIKE '%$search%' OR post_decs LIKE '%$search%' 
                        ORDER BY post.post_id DESC LIMIT {$offset},{$limit}";
                       $run = mysqli_query($con, $sql);
-                      if($run==true){
+                      if(mysqli_num_rows($run) >0){
                         while($row=mysqli_fetch_array($run)){
                             ?>
                             
@@ -78,7 +78,10 @@ require_once("config.php");
                         </div>
                         <?php
                                 }
-                                }?>
+                                }else{
+                                    echo "<h3 style='color:red;'>Data not found</h3>";
+                                }
+                                ?>
                        
                         <?php
                             $sql1 = "SELECT * FROM post WHERE post_title LIKE '%$search%' OR post_decs LIKE '%$search%'";

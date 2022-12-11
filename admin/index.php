@@ -29,7 +29,7 @@ require_once("config.php");
                         <img class="logo" src="images/news.jpg">
                         <h3 class="heading">Admin</h3>
                         <!-- Form Start -->
-                        <form  action="<?php $_SERVER['PHP_SELF']?>" method ="POST">
+                        <form class="form" action="<?php $_SERVER['PHP_SELF']?>" method ="POST">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" name="username" class="form-control" placeholder="" required>

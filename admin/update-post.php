@@ -22,16 +22,16 @@ if(isset($_SESSION["id"])){
         $row = mysqli_fetch_array($run);
         
         ?>
-        <form action="upadte-post_core.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form class="form" action="upadte-post_core.php" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="form-group">
-                <input type="hidden" name="post_id"  class="form-control" value="<?php echo $row['post_id'] ?>" placeholder="">
+                <input type="hidden" name="post_id"  class="form-control" value="<?php echo $row['post_id'] ?>" placeholder="" required>
             </div>
             <div class="form-group">
-                <input type="hidden" name="cateid"  class="form-control" value="<?php echo $cateid ?>" placeholder="">
+                <input type="hidden" name="cateid"  class="form-control" value="<?php echo $cateid ?>" placeholder="" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputTile">Title</label>
-                <input type="text" name="post_title"  class="form-control" id="exampleInputUsername" value="<?php echo $row['post_title'] ?>">
+                <input type="text" name="post_title"  class="form-control" id="exampleInputUsername" value="<?php echo $row['post_title'] ?>"required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1"> Description</label>
@@ -39,7 +39,7 @@ if(isset($_SESSION["id"])){
             </div>
             <div class="form-group">
                 <label for="exampleInputCategory">Category</label>
-                <select class="form-control" name="category">
+                <select class="form-control" name="category" required>
                     
                     <?php
                         $sql1 = "SELECT * FROM `category`";

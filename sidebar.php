@@ -2,7 +2,7 @@
     <!-- search box -->
     <div class="search-box-container">
         <h4>Search</h4>
-        <form class="search-post" action="search.php" method ="GET">
+        <form class="search-post form" action="search.php" method ="GET">
             <div class="input-group">
                 <input type="text" name="search" class="form-control" placeholder="Search ....." required>
                 <span class="input-group-btn">

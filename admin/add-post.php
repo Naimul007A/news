@@ -12,7 +12,7 @@ if(isset($_SESSION["id"])){
              </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form -->
-                  <form  action="add-post-core.php" method="POST" enctype="multipart/form-data">
+                  <form class="form" action="add-post-core.php" method="POST" enctype="multipart/form-data">
                       <div class="form-group">
                           <label for="post_title">Title</label>
                           <input type="text" name="post_title" class="form-control" autocomplete="off" required>

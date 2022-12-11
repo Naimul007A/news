@@ -167,7 +167,7 @@ img.logo{
     text-align:center;
 }
 
-form{
+.form{
     background: #fff;
     padding: 25px;
     box-shadow:0 1px 3px rgba(0, 0, 0, 0.13);
@@ -549,6 +549,19 @@ i.fa{
   }
   .author span {
     font-weight: 700;
+  }
+  .search-post {
+    background: none;
+    padding: 0px;
+    box-shadow: none;
+  }
+  .page-search{
+    /* margin: 5px 0 30px; */
+    padding: 0 5px 10px;
+    border-bottom: 2px solid #333;
+  }
+  .page-search span {
+    color: #FF0600;
   }
 /* ===================== */
 /* FrontEnd CSS END */
